@@ -1,5 +1,4 @@
- // Password strength checker
-      function checkPasswordStrength(password) {
+function checkPasswordStrength(password) {
         let score = 0;
         let feedback = [];
 
@@ -33,7 +32,6 @@
         };
       }
 
-      // Create floating particles
       function createParticles() {
         const particlesContainer = document.getElementById('particles');
         const particleCount = 20;
@@ -49,13 +47,11 @@
         }
       }
 
-      // Update background based on password strength
       function updateBackground(strength) {
         const background = document.getElementById('background');
         background.className = `background bg-${strength}`;
       }
 
-      // Update strength indicator
       function updateStrengthIndicator(result) {
         const strengthBar = document.getElementById('strengthBar');
         const strengthText = document.getElementById('strengthText');
@@ -79,7 +75,6 @@
         }
       }
 
-      // Add input animations
       function addInputAnimations() {
         const inputs = document.querySelectorAll('.input-field');
         inputs.forEach(input => {
@@ -93,13 +88,11 @@
         });
       }
 
-      // Add submit button animation
       function addSubmitAnimation() {
         const submitBtn = document.getElementById('submitBtn');
         submitBtn.addEventListener('click', function(e) {
           e.preventDefault();
           
-          // Create ripple effect
           const ripple = document.createElement('span');
           const rect = this.getBoundingClientRect();
           const size = Math.max(rect.width, rect.height);
@@ -127,7 +120,6 @@
         });
       }
 
-      // Add ripple animation CSS
       const style = document.createElement('style');
       style.textContent = `
         @keyframes ripple {
@@ -139,7 +131,6 @@
       `;
       document.head.appendChild(style);
 
-      // Initialize everything
       document.addEventListener('DOMContentLoaded', function() {
         createParticles();
         addInputAnimations();
